@@ -1,15 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.ui.deo.Controller">
-    <TableView fx:id="chairTable" layoutX="14.0" layoutY="14.0" prefHeight="300.0" prefWidth="580.0">
-        <columns>
-            <TableColumn fx:id="locationColumn" text="Location"/>
-            <TableColumn fx:id="chairs2021Column" text="2021 Chairs"/>
-            <TableColumn fx:id="tables2021Column" text="2021 Tables"/>
-            <TableColumn fx:id="chairs2022Column" text="2022 Chairs"/>
-            <TableColumn fx:id="tables2022Column" text="2022 Tables"/>
-        </columns>
-    </TableView>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: #FEFEFE;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ui.deo.Controller">
+    <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="640.0">
+        <children>
+            <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text=" Fine Furniture Company" textAlignment="CENTER" wrappingWidth="289.13671875">
+                <font>
+                    <Font size="21.0" />
+                </font>
+            </Text>
+        </children>
+    </VBox>
+    <HBox layoutY="65.0" prefHeight="415.0" prefWidth="640.0">
+        <children>
+            <VBox prefHeight="415.0" prefWidth="190.0" />
+            <VBox alignment="CENTER" prefHeight="282.0" prefWidth="487.0">
+                <children>
+                    <TableView fx:id="chairTable" editable="true" prefHeight="196.0" prefWidth="430.0" style="-fx-padding: 10;">
+                        <columns>
+                            <TableColumn fx:id="locationColumn" text="Location" />
+                            <TableColumn fx:id="chairs2021Column" prefWidth="98.4000244140625" text="Chairs (2021)" />
+                            <TableColumn fx:id="tables2021Column" prefWidth="91.19999694824219" text="Tables (2021)" />
+                            <TableColumn fx:id="chairs2022Column" prefWidth="89.60003662109375" text="Chairs (2021)" />
+                            <TableColumn fx:id="tables2022Column" prefWidth="84.00006103515625" text="Tables (2021)" />
+                        </columns>
+                    </TableView>
+                    <SplitPane prefHeight="221.0" prefWidth="469.0" />
+                </children>
+            </VBox>
+        </children>
+    </HBox>
 </AnchorPane>
